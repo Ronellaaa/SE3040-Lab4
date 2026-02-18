@@ -16,32 +16,32 @@ fs.writeFile(
   },
 );
 
-// const http = require("http");
-// http
-//   .createServer((req, res) => {
-//     res.writeHead(200, { "Content-Type": "text/html" });
-//     res.write("Hello World !!!!");
-//     res.end();
-//   })
-//   .listen(8080);
+const http = require("http");
+http
+  .createServer((req, res) => {
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.write("Hello World !!!!");
+    res.end();
+  })
+  .listen(8080);
 
-// const https = require("https");
-// https
-//   .get("https://jsonplaceholder.typicode.com/posts/1", (res) => {
-//     let data = "";
-//     res.on("data", (chunck) => {
-//       data += chunck;
-//     });
-//     res.on("end", () => {
-//       console.log(JSON.parse(data));
-//     });
-//   })
-//   .on("error", (err) => {
-//     console.log("Error: " + err.message);
-//   });
+const https = require("https");
+https
+  .get("https://jsonplaceholder.typicode.com/posts/1", (res) => {
+    let data = "";
+    res.on("data", (chunck) => {
+      data += chunck;
+    });
+    res.on("end", () => {
+      console.log(JSON.parse(data));
+    });
+  })
+  .on("error", (err) => {
+    console.log("Error: " + err.message);
+  });
 
-// const myModule = require("./my-module");
-// console.log(myModule.myModule());
+const myModule = require("./my-module");
+console.log(myModule.myModule());
 
 const myPromise = new Promise((resolve, reject) => {
   const success = true;
@@ -57,3 +57,13 @@ const myPromise = new Promise((resolve, reject) => {
   .catch((error) => {
     console.log(error);
   });
+
+async function myAsyncFunction() {
+  try {
+    const result = await myPromise;
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
+}
+myAsyncFunction();
