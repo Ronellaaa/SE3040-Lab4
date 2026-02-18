@@ -1,0 +1,20 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "Node.js/Express practice project",
+  "homepage": "https://github.com/Ronellaaa/SE3040-Lab4#readme",
+  "bugs": {
+    "url": "https://github.com/Ronellaaa/SE3040-Lab4/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ronellaaa/SE3040-Lab4.git"
+  },
+  "license": "ISC",
+  "author": "Ronella",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
